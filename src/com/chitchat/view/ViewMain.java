@@ -54,7 +54,14 @@ public class ViewMain {
 		
 	}
 	
+	public void makeUserLabel(String user) {
+		JLable
+	}
+	
+	//should be on different View
 	public void setMessage(String message, String user, Date timeStamp) {
 		
 	}
+	
+	
 }

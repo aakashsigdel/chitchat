@@ -3,11 +3,13 @@ package com.chitchat.controller;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.chitchat.model.ModelMain;
+import com.chitchat.model.ModelChatMessages;
+import com.chitchat.model.ModelUsers;
 import com.chitchat.view.ViewMain;
 
 public class ControllerMain {
-	private ModelMain model;
+	private ModelChatMessages modelChatMessages;
+	private ModelUsers modelUsers;
 	private ViewMain view;
 	private HashMap<String, String> userMap;
 	
@@ -22,11 +24,11 @@ public class ControllerMain {
 	}
 	
 	public void setMessageOnView() {
-		view.setMessage(model.getMessage(), model.getUser(), model.getTimeStamp());
+		view.setMessage(modelChatMessages.getMessage(), modelChatMessages.getUser(), modelChatMessages.getTimeStamp());
 	}
 	
-	public void fillUsers(ArrayList<String> users) {
-		for(String user : users) {
+	public void fillUsers() {
+		for(String user : userMap.keySet()) {
 			//populate user in the chat window
 		}
 	}
